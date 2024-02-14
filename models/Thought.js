@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Reaction = require('./Reaction');
 
 // Define schema for Thought model
 const thoughtSchema = new mongoose.Schema({
@@ -9,16 +10,21 @@ const thoughtSchema = new mongoose.Schema({
         minlength: 1,
         maxlength: 280
     },
+    // Username of the user who created the thought
+    username: {
+        type: String,
+        required: true
+    },
     // Timestamp when the thought was created
     createdAt: {
         type: Date,
         default: Date.now,
         get: createdAtVal => dateFormat(createdAtVal)
     },
-    // Username of the user who created the thought
-    username: {
-        type: String,
-        required: true
+    // Timestamp when the thought was updated
+    updatedAt: {
+        type: Date,
+        default: Date.now
     },
     // Array of reactions associated with the thought
     reactions: [Reaction.schema]

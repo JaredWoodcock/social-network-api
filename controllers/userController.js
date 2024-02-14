@@ -1,4 +1,5 @@
 const { User } = require('../models');
+const { Thought } = require('../models');
 
 // Function for the user controller
 const userController = {
