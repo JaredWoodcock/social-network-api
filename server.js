@@ -1,7 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/connection');
-const userRoutes = require('./routes/users');
-const thoughtRoutes = require('./routes/thoughts');
+const routes = require('./routes');
 
 // Create Express app
 const app = express();
@@ -14,8 +13,7 @@ app.use(express.json());
 connectDB();
 
 // Routes
-app.use('/api/users', userRoutes);
-app.use('/api/thoughts', thoughtRoutes);
+app.use('/api', routes);
 
 // Start server
 app.listen(PORT, () => {
