@@ -9,3 +9,4 @@ In this challenge, I built an API for a social network application where users c
 <ul>When the user tests API POST and DELETE routes in Insomnia, then they are able to successfully create and delete reactions and thoughts and add or remove friends to a user's friend list.</ul>
 
 Walkthought Video: 
+[Module 18 Challenge - Social Network API Walkthrough.webm](https://github.com/JaredWoodcock/social-network-api/assets/144859311/1016ccd7-a6d8-4e64-a03f-9c7c01ccd58d) 
